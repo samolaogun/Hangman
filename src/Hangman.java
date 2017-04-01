@@ -57,22 +57,22 @@ class Hangman {
 	 *	@param wordChoices  Passes the library to the guess function
 	 */
 	private static void play(Scanner scn, ArrayList<String> wordChoices) {
-    // This is where the state of each character is managed
+		// This is where the state of each character is managed
 		LinkedHashMap<Character, Boolean> model = new LinkedHashMap<>();
 
-    // A tokenized form of the chosen string
+		// A tokenized form of the chosen string
 		char[] view = wordChoices.get((int) Math.floor(Math.random() * wordChoices.size())).toLowerCase().toCharArray();
 		fillFalse(view, model, 0);
 
 		final int len = model.size();
-
-    // Begins guessing
+		
+		// Begins guessing
 		guess(view, model, scn, wordChoices, 0, len);
 	}
 
 	/**
 	 *	Handle each guess by tracking the guess count and
-   *	checking for completion
+	 *	checking for completion
 	 *
 	 *	@param view         Orignial array of character values
 	 *	@param model        Associative array without tautologies
@@ -83,10 +83,10 @@ class Hangman {
 	private static void guess(char[] view, LinkedHashMap<Character, Boolean> model, Scanner scn, ArrayList<String> wordChoices, int count, int len) {
 		System.out.print(">>> Guess a character: ");
 
-    // Adds each correct guess to a count
+		// Adds each correct guess to a count
 		count += picked(scn.next().toLowerCase().charAt(0), model, view);
 
-    // If the count of correct char matches the amount of possible chars, exit
+		// If the count of correct char matches the amount of possible chars, exit
 		if (count >= len) {
 			System.out.printf(">>> You tried %d times. Would you like to play again? Enter Y or N ", count);
 
@@ -135,7 +135,7 @@ class Hangman {
 
 	/**
 	 *	Recursively parse the Buffer and add product
-   *	to the {@code wordChoices} List
+	 *	to the {@code wordChoices} List
 	 *
 	 *	@param br           Buffer Stream
 	 *	@param wordChoices  Library
@@ -156,7 +156,7 @@ class Hangman {
 
 	/**
 	 *	Recursively display the model if the position in the view array is less than
-   *	the length
+	 *	the length
 	 *
 	 *	@param view   Orignial array of character values
 	 *	@param model  Associative array without tautologies
