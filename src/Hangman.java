@@ -37,7 +37,6 @@ class Hangman {
 	public static void main(String[] args) {
 		ArrayList<String> wordChoices = new ArrayList<>();
 
-		// Reads the "words.txt" file from same directory
 		try {
 			FileReader fr = new FileReader(ROOT_PATH + Dictionaries.COUNTRIES.getPath());
 			BufferedReader br = new BufferedReader(fr);
@@ -65,8 +64,8 @@ class Hangman {
 		fillFalse(view, model, 0);
 
 		final int len = model.size();
-		
-		// Begins guessing
+
+		// Begin guessing
 		guess(view, model, scn, wordChoices, 0, len);
 	}
 
@@ -126,16 +125,16 @@ class Hangman {
 		return 0;
 	}
 
-	private static void fillFalse(char[] chars, LinkedHashMap<Character, Boolean> model, int count) {
-		if (count < chars.length) {
-			model.put(chars[count], false);
-			fillFalse(chars, model, ++count);
+	private static void fillFalse(char[] view, LinkedHashMap<Character, Boolean> model, int count) {
+		if (count < view.length) {
+			model.put(view[count], false);
+			fillFalse(view, model, ++count);
 		}
 	}
 
 	/**
-	 *	Recursively parse the Buffer and add product
-	 *	to the {@code wordChoices} List
+	 *	Recursively parse the buffer and add the product
+	 *	to the {@code wordChoices} list
 	 *
 	 *	@param br           Buffer Stream
 	 *	@param wordChoices  Library
