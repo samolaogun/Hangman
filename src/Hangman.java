@@ -2,16 +2,15 @@
  *	Hangman
  *
  *	A version of Hangman built with a functional philosophy. A few
- *	pattern that you might notice are, recursive functions, pure functions,
- *	higher order functions and dependency injection. Btw, htf do you make a build system
- *	because bash is totally wrong.
+ *	pattern that you might notice are, recursive definitions, pure functions,
+ *	and dependency injection.
  *
  *	@author Sam Olaogun
  */
-
 import java.util.LinkedHashMap;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Arrays;
 import java.io.FileReader;
 import java.io.BufferedReader;
 
@@ -19,6 +18,7 @@ class Hangman {
 
 	public static final String ROOT_PATH = "../lib/";
 
+	// Consolidate dictionary and implementation
 	private enum Dictionaries {
 		COUNTRIES("countries.txt"),
 		FRUITS("fruits.txt");
@@ -37,9 +37,15 @@ class Hangman {
 	public static void main(String[] args) {
 		ArrayList<String> wordChoices = new ArrayList<>();
 
+		// TODO: Consolidate try/catch and dictionary
 		try {
+			// Load Dictionary
 			FileReader fr = new FileReader(ROOT_PATH + Dictionaries.COUNTRIES.getPath());
+
+			// Tokenize file contents
 			BufferedReader br = new BufferedReader(fr);
+
+			// Read file and pass on to wordChoices List
 			read(br, wordChoices);
 		} catch (Exception e) {
 			System.out.println(e);
@@ -50,7 +56,7 @@ class Hangman {
 	}
 
 	/**
-	 *	Higher order function to handle gameplay
+	 *	Recursive definition of the play feature
 	 *
 	 *	@param scn          Console IO
 	 *	@param wordChoices  Passes the library to the guess function
@@ -60,10 +66,13 @@ class Hangman {
 		LinkedHashMap<Character, Boolean> model = new LinkedHashMap<>();
 
 		// A tokenized form of the chosen string
-		char[] view = wordChoices.get((int) Math.floor(Math.random() * wordChoices.size())).toLowerCase().toCharArray();
+		String word = wordChoices.get((int) Math.floor(Math.random() * wordChoices.size())).toLowerCase();
+		char[] view = word.toCharArray();
 		fillFalse(view, model, 0);
 
-		final int len = model.size();
+		// Evaluate length without spaces
+		int diff = word.length() - word.replace(" ", "").length();
+		int len = model.size() - diff;
 
 		// Begin guessing
 		guess(view, model, scn, wordChoices, 0, len);
@@ -83,7 +92,7 @@ class Hangman {
 		System.out.print(">>> Guess a character: ");
 
 		// Adds each correct guess to a count
-		count += picked(scn.next().toLowerCase().charAt(0), model, view);
+		count += picked(scn.next().charAt(0), model, view);
 
 		// If the count of correct char matches the amount of possible chars, exit
 		if (count >= len) {
@@ -108,6 +117,7 @@ class Hangman {
 	 *	@return       Returns no value if no condition is met
 	 */
 	private static int picked(char chr, LinkedHashMap<Character, Boolean> model, char[] view) {
+		// Prompts user and returns 1 if the guess is correct, else returns 0
 		if (model.get(chr) != null) {
 			if ((boolean) model.get(chr)) {
 				System.out.printf("'%c' was already picked. Try something else ", chr);
@@ -125,6 +135,13 @@ class Hangman {
 		return 0;
 	}
 
+	/**
+	*		Recursively fills the model with false because no values have been selected
+	*
+	*		@param view
+	* 	@param model
+	*		@param count
+	*/
 	private static void fillFalse(char[] view, LinkedHashMap<Character, Boolean> model, int count) {
 		if (count < view.length) {
 			model.put(view[count], false);
@@ -165,6 +182,8 @@ class Hangman {
 		if (count < view.length) {
 			if (model.get(view[count])) {
 				System.out.print(view[count]);
+			} else if (view[count] == ' ') {
+				System.out.print(" ");
 			} else {
 				System.out.print('*');
 			}

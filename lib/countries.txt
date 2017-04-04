@@ -3,6 +3,8 @@ Albania
 Algeria
 Andorra
 Angola
+Anguilla
+Antigua and Barbuda
 Argentina
 Armenia
 Australia
@@ -16,44 +18,59 @@ Belarus
 Belgium
 Belize
 Benin
+Bermuda
 Bhutan
 Bolivia
+Bosnia and Herzegovina
 Botswana
 Brazil
-Brunei
+Brunei Darussalam
 Bulgaria
-Burkina
+Burkina Faso
+Burma
 Burundi
 Cambodia
 Cameroon
 Canada
+Cape Verde
+Cayman Islands
+Central African Republic
 Chad
 Chile
 China
 Colombia
 Comoros
 Congo
+Costa Rica
 Croatia
 Cuba
 Cyprus
+Czech Republic
+Democratic Republic of the Congo
 Denmark
 Djibouti
+Dominican Republic
 Dominica
 Ecuador
 Egypt
+El Salvador
+Equatorial Guinea
 Eritrea
 Estonia
 Ethiopia
 Fiji
 Finland
 France
+French Guiana
 Gabon
 Gambia
 Georgia
 Germany
 Ghana
+Great Britain
 Greece
 Grenada
+Guadeloupe
 Guatemala
 Guinea
 Guinea-Bissau
@@ -66,19 +83,17 @@ India
 Indonesia
 Iran
 Iraq
-Ireland
 Israel
 Italy
+Ivory Coast
 Jamaica
 Japan
 Jordan
 Kazakhstan
 Kenya
-Kiribati
-Korea
 Kosovo
 Kuwait
-Kyrgyzstan
+Kyrgyz Republic
 Laos
 Latvia
 Lebanon
@@ -88,77 +103,95 @@ Libya
 Liechtenstein
 Lithuania
 Luxembourg
-Macedonia
+Republic of Macedonia
 Madagascar
 Malawi
 Malaysia
 Maldives
 Mali
 Malta
+Martinique
 Mauritania
 Mauritius
+Mayotte
 Mexico
-Micronesia
 Moldova
 Monaco
 Mongolia
 Montenegro
+Montserrat
 Morocco
 Mozambique
-Myanmar
 Namibia
-Nauru
 Nepal
 Netherlands
+New Zealand
 Nicaragua
 Niger
 Nigeria
+North Korea
 Norway
 Oman
+Pacific Islands
 Pakistan
-Palau
 Panama
+Papua New Guinea
 Paraguay
 Peru
 Philippines
 Poland
 Portugal
+Puerto Rico
 Qatar
+Reunion
 Romania
-Russia
+Russian Federation
 Rwanda
+Saint Kitts and Nevis
+Saint Lucia
+Saint Vincent's and Grenadines
 Samoa
+Sao Tome and Principe
+Saudi Arabia
 Senegal
 Serbia
 Seychelles
+Sierra Leone
 Singapore
-Slovakia
+Slovak Republic
 Slovenia
+Solomon Islands
 Somalia
+South Africa
+South Korea
+South Sudan
 Spain
+Sri Lanka
 Sudan
 Suriname
 Swaziland
 Sweden
 Switzerland
 Syria
-Taiwan
 Tajikistan
 Tanzania
 Thailand
+Timor Leste
 Togo
-Tonga
+Trinidad and Tobago
 Tunisia
 Turkey
 Turkmenistan
-Tuvalu
+Turks and Caicos Islands
 Uganda
 Ukraine
+United Arab Emirates
+United States of America
 Uruguay
 Uzbekistan
-Vanuatu
 Venezuela
 Vietnam
+Virgin Islands
 Yemen
 Zambia
 Zimbabwe
